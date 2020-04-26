@@ -8,6 +8,7 @@ $secondary-red: hsl(0, 87%, 67%);
 
 // ### Neutral
 
+$gray: #f0f1f6;
 $neutral-gray: hsl(0, 0%, 75%);
 $neutral-grayish: hsl(257, 7%, 63%);
 $neutral-blue: hsl(255, 11%, 22%);
@@ -142,34 +143,61 @@ div {
 }
 
 .Content {
-  background-color: $neutral-grayish;
+  background-color: $gray;
   text-align: center;
+  padding-top: 150px;
   @media (min-width: $breakpoint-mobile) {
     text-align: left;
   }
-}
-
-.content-flex-container {
-  display: flex;
-  flex-direction: column;
-  @media (min-width: $breakpoint-mobile) {
-    flex-direction: row;
+  .contentText {
+    color: $neutral-gray;
+    line-height: 2rem;
+    margin: 0;
   }
-}
+  .div-advanced-statistics {
+    width: 380px;
+    max-width: 90vw;
+    margin: 0 auto 90px;
+  }
+  .circle {
+    height: 90px;
+    width: 90px;
+    background-color: $primary-violet;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    bottom: 50px;
+  }
+  img {
+    position: relative;
+    top: 20px;
+    @media (min-width: $breakpoint-mobile) {
+      left: 23px;
+    }
+  }
+  .content-flex-container {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $breakpoint-mobile) {
+      flex-direction: row;
+    }
+  }
 
-.content-flex-container:nth-child(1) {
-  max-width: 350px;
-  margin: 0 auto;
-}
+  .content-flex-container:nth-child(1) {
+    max-width: 350px;
+    margin: 0 auto;
+  }
 
-.Card {
-  width: 300px;
-  height: 250px;
-  margin: 0 auto;
-}
-
-.content-boost {
-  background-image: url(/images/bg-boost-mobile.svg);
+  .Card {
+    width: 400px;
+    max-width: 90%;
+    height: 250px;
+    margin: 0 auto;
+    background-color: white;
+  }
+  .content-boost {
+    background-image: url(/images/bg-boost-mobile.svg);
+  }
 }
 
 .footer-features {

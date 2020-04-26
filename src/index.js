@@ -43,7 +43,7 @@ ReactDOM.render(
     </div>
 
     <div className="Content">
-      <div className="Card center-items-column">
+      <div className="div-advanced-statistics center-items-column">
         <h2>Advanced Statistics</h2>
         <p className="contentText">
           Track how your links are performing across the web with our advanced
@@ -52,7 +52,9 @@ ReactDOM.render(
       </div>
       <div className="content-flex-container">
         <div className="Card">
-          <img src="./images/icon-brand-recognition.svg" alt=""></img>
+          <div class="circle">
+            <img src="./images/icon-brand-recognition.svg" alt=""></img>
+          </div>
           <h2>Brand Recognition</h2>
           <p className="contentText">
             Boost your brand recognition with each click. Generic links don't
@@ -60,7 +62,9 @@ ReactDOM.render(
           </p>
         </div>
         <div className="Card">
-          <img src="./images/icon-brand-recognition.svg" alt=""></img>
+          <div class="circle">
+            <img src="./images/icon-detailed-records.svg" alt=""></img>
+          </div>
           <h2>Detailed Records</h2>
           <p className="contentText">
             Gain insights into who is clicking your links. Knowing when and
@@ -68,7 +72,9 @@ ReactDOM.render(
           </p>
         </div>
         <div className="Card">
-          <img src="./images/icon-brand-recognition.svg" alt=""></img>
+          <div class="circle">
+            <img src="./images/icon-fully-customizable.svg" alt=""></img>
+          </div>
           <h2>Fully Customizable</h2>
           <p className="contentText">
             Improve brand awareness and content discoverability through

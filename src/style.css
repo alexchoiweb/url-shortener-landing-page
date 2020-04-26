@@ -136,8 +136,9 @@ div {
 }
 
 .Content {
-  background-color: #9e9aa7;
+  background-color: #f0f1f6;
   text-align: center;
+  padding-top: 150px;
 }
 
 @media (min-width: 601px) {
@@ -146,7 +147,40 @@ div {
   }
 }
 
-.content-flex-container {
+.Content .contentText {
+  color: #bfbfbf;
+  line-height: 2rem;
+  margin: 0;
+}
+
+.Content .div-advanced-statistics {
+  width: 380px;
+  max-width: 90vw;
+  margin: 0 auto 90px;
+}
+
+.Content .circle {
+  height: 90px;
+  width: 90px;
+  background-color: #3b3054;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  bottom: 50px;
+}
+
+.Content img {
+  position: relative;
+  top: 20px;
+}
+
+@media (min-width: 601px) {
+  .Content img {
+    left: 23px;
+  }
+}
+
+.Content .content-flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,7 +191,7 @@ div {
 }
 
 @media (min-width: 601px) {
-  .content-flex-container {
+  .Content .content-flex-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -165,18 +199,20 @@ div {
   }
 }
 
-.content-flex-container:nth-child(1) {
+.Content .content-flex-container:nth-child(1) {
   max-width: 350px;
   margin: 0 auto;
 }
 
-.Card {
-  width: 300px;
+.Content .Card {
+  width: 400px;
+  max-width: 90%;
   height: 250px;
   margin: 0 auto;
+  background-color: white;
 }
 
-.content-boost {
+.Content .content-boost {
   background-image: url(/images/bg-boost-mobile.svg);
 }
 
