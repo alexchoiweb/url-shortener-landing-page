@@ -27,7 +27,6 @@ ReactDOM.render(
           <img src="images/illustration-working.svg" alt="" />
         </div>
       </div>
-
       <div className="hero-content">
         <h1>More than just shorter links</h1>
         <p className="contentText">

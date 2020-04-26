@@ -34,19 +34,22 @@ body {
   }
 }
 
+// borders for visualizing initial html skeleton
 div {
   border: 2px solid $primary-cyan;
 }
 
 .button-getStarted {
-  min-width: 220px;
+  min-width: 210px;
   min-height: 55px;
   color: white;
   background-color: $primary-cyan;
   margin: 0 auto;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 700;
   border-radius: 50px;
   display: block;
+  letter-spacing: 2px;
 }
 
 .Navbar {
@@ -60,11 +63,16 @@ div {
 }
 
 .Hero {
-  min-height: 300px;
+  min-height: 900px;
+
   @media (min-width: $breakpoint-mobile) {
     background-image: url(/images/illustration-working.svg);
-    background-size: cover;
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position: right 10px;
+    min-height: 600px;
   }
+
   .hero-img-container {
     margin: 0 auto;
   }
@@ -82,20 +90,48 @@ div {
     margin: 0 auto;
   }
 
-  h1,
-  p {
-    margin: 0 auto;
-    text-align: center;
-    max-width: 400px;
-  }
   h1 {
     margin: 10px auto;
     line-height: 2.2rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+    max-width: 400px;
+
+    @media (min-width: $breakpoint-mobile) {
+      margin: 0;
+      text-align: left;
+      font-size: 3rem;
+      line-height: 3rem;
+    }
   }
   p {
+    margin: 0 auto;
     color: $neutral-gray;
     margin-bottom: 15px;
+    text-align: center;
+    max-width: 400px;
+    line-height: 1.4rem;
+
+    @media (min-width: $breakpoint-mobile) {
+      margin: 8px 0 18px 0;
+      text-align: left;
+      font-size: 1.1rem;
+      max-width: 450px;
+    }
+  }
+  .button-getStarted {
+    margin: 0 auto;
+
+    @media (min-width: $breakpoint-mobile) {
+      margin: 0;
+    }
+  }
+
+  .hero-content {
+    @media (min-width: $breakpoint-mobile) {
+      margin: 100px auto;
+      width: 85%;
+    }
   }
 }
 
@@ -106,6 +142,7 @@ div {
 }
 
 .Content {
+  background-color: $neutral-grayish;
   text-align: center;
   @media (min-width: $breakpoint-mobile) {
     text-align: left;

@@ -23,14 +23,16 @@ div {
 }
 
 .button-getStarted {
-  min-width: 220px;
+  min-width: 210px;
   min-height: 55px;
   color: white;
   background-color: #2acfcf;
   margin: 0 auto;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 700;
   border-radius: 50px;
   display: block;
+  letter-spacing: 2px;
 }
 
 .Navbar {
@@ -46,13 +48,16 @@ div {
 }
 
 .Hero {
-  min-height: 300px;
+  min-height: 900px;
 }
 
 @media (min-width: 601px) {
   .Hero {
     background-image: url(/images/illustration-working.svg);
-    background-size: cover;
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position: right 10px;
+    min-height: 600px;
   }
 }
 
@@ -72,22 +77,56 @@ div {
   margin: 0 auto;
 }
 
-.Hero h1,
-.Hero p {
-  margin: 0 auto;
+.Hero h1 {
+  margin: 10px auto;
+  line-height: 2.2rem;
+  font-size: 2.5rem;
   text-align: center;
   max-width: 400px;
 }
 
-.Hero h1 {
-  margin: 10px auto;
-  line-height: 2.2rem;
-  font-size: 2rem;
+@media (min-width: 601px) {
+  .Hero h1 {
+    margin: 0;
+    text-align: left;
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 }
 
 .Hero p {
+  margin: 0 auto;
   color: #bfbfbf;
   margin-bottom: 15px;
+  text-align: center;
+  max-width: 400px;
+  line-height: 1.4rem;
+}
+
+@media (min-width: 601px) {
+  .Hero p {
+    margin: 8px 0 18px 0;
+    text-align: left;
+    font-size: 1.1rem;
+    max-width: 450px;
+  }
+}
+
+.Hero .button-getStarted {
+  margin: 0 auto;
+}
+
+@media (min-width: 601px) {
+  .Hero .button-getStarted {
+    margin: 0;
+  }
+}
+
+@media (min-width: 601px) {
+  .Hero .hero-content {
+    margin: 100px auto;
+    width: 85%;
+  }
 }
 
 .Input {
@@ -97,6 +136,7 @@ div {
 }
 
 .Content {
+  background-color: #9e9aa7;
   text-align: center;
 }
 
