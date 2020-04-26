@@ -1,0 +1,172 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+}
+
+@media (min-width: 601px) {
+  .hide-desktop {
+    display: none;
+  }
+}
+
+div {
+  border: 2px solid #2acfcf;
+}
+
+.button-getStarted {
+  min-width: 220px;
+  min-height: 55px;
+  color: white;
+  background-color: #2acfcf;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  display: block;
+}
+
+.Navbar {
+  height: 60px;
+}
+
+.Navbar .Logo {
+  width: 160px;
+}
+
+.Navbar .nav-flex-container {
+  display: none;
+}
+
+.Hero {
+  min-height: 300px;
+}
+
+@media (min-width: 601px) {
+  .Hero {
+    background-image: url(/images/illustration-working.svg);
+    background-size: cover;
+  }
+}
+
+.Hero .hero-img-container {
+  margin: 0 auto;
+}
+
+.Hero img {
+  display: block;
+  height: auto;
+  margin-left: 20px;
+}
+
+.Hero .side-crop {
+  max-width: 540px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.Hero h1,
+.Hero p {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 400px;
+}
+
+.Hero h1 {
+  margin: 10px auto;
+  line-height: 2.2rem;
+  font-size: 2rem;
+}
+
+.Hero p {
+  color: #bfbfbf;
+  margin-bottom: 15px;
+}
+
+.Input {
+  width: 300px;
+  margin: 0 auto;
+  height: 120px;
+}
+
+.Content {
+  text-align: center;
+}
+
+@media (min-width: 601px) {
+  .Content {
+    text-align: left;
+  }
+}
+
+.content-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 601px) {
+  .content-flex-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.content-flex-container:nth-child(1) {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.Card {
+  width: 300px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.content-boost {
+  background-image: url(/images/bg-boost-mobile.svg);
+}
+
+.footer-features a {
+  display: block;
+}
+
+.center-items-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.center-items-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-logos {
+  height: 100px;
+}
+/*# sourceMappingURL=style.css.map */
