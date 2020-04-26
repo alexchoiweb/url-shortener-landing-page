@@ -42,6 +42,7 @@ ReactDOM.render(
       <input type="text" placeholder="Shorten a link here..."></input>
       <button>Shorten it!</button>
     </div>
+
     <div className="Content">
       <div className="Card center-items-column">
         <h2>Advanced Statistics</h2>
@@ -81,6 +82,7 @@ ReactDOM.render(
         <button>Get Started</button>
       </div>
     </div>
+
     <div className="Footer">
       <div className="footer-logo center-items-row">
         <image src="images/logo.svg" />
