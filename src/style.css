@@ -14,7 +14,13 @@ body {
 
 @media (min-width: 601px) {
   .hide-desktop {
-    display: none;
+    float: right;
+    position: relative;
+    top: -177px;
+    right: 350px;
+    height: auto;
+    width: 200px;
+    margin: 0;
   }
 }
 
@@ -45,17 +51,31 @@ body {
 }
 
 .Hero {
-  min-height: 750px;
+  min-height: 00px;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 601px) and (max-width: 1051px) {
   .Hero {
     background-image: url(/images/illustration-working.svg);
     background-size: 55%;
     background-repeat: no-repeat;
     background-position: right 10px;
-    min-height: 600px;
+    min-height: 400px;
   }
+}
+
+@media (min-width: 1051px) {
+  .Hero {
+    background: none;
+    min-height: 550px;
+  }
+}
+
+.Hero .contentText {
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+  max-width: 425px;
 }
 
 .Hero .hero-img-container {
@@ -68,10 +88,24 @@ body {
   margin-left: 20px;
 }
 
+@media (min-width: 1051px) {
+  .Hero img {
+    display: block;
+    margin: 0;
+  }
+}
+
 .Hero .side-crop {
   max-width: 540px;
   overflow: hidden;
   margin: 0 auto;
+}
+
+@media (min-width: 601px) {
+  .Hero .side-crop {
+    overflow: visible;
+    margin: 130px 130px 0 0;
+  }
 }
 
 .Hero h1 {
@@ -126,16 +160,6 @@ body {
   }
 }
 
-.Input {
-  width: 900px;
-  max-width: 90%;
-  margin: 0 auto;
-  height: 120px;
-  background-color: #3b3054;
-  position: relative;
-  top: 60px;
-}
-
 .Content {
   background-color: #f0f1f6;
   text-align: center;
@@ -146,6 +170,16 @@ body {
   .Content {
     text-align: left;
   }
+}
+
+.Content .Input {
+  width: 900px;
+  max-width: 90%;
+  margin: 0 auto;
+  height: 120px;
+  background-color: #3b3054;
+  position: relative;
+  top: -120px;
 }
 
 .Content .backgroundLine p {
@@ -168,7 +202,7 @@ body {
 .Content .div-advanced-statistics {
   width: 380px;
   max-width: 90vw;
-  margin: 0 auto 90px;
+  margin: 70px auto 90px;
 }
 
 .Content .content-flex-container {

@@ -15,6 +15,7 @@ $neutral-blue: hsl(255, 11%, 22%);
 $neutral-violet: hsl(260, 8%, 14%);
 
 $breakpoint-mobile: 601px;
+$breakpoint-tablet: 1051px;
 
 * {
   box-sizing: border-box;
@@ -31,7 +32,14 @@ body {
 
 .hide-desktop {
   @media (min-width: $breakpoint-mobile) {
-    display: none;
+    // display: none;
+    float: right;
+    position: relative;
+    top: -177px;
+    right: 350px;
+    height: auto;
+    width: 200px;
+    margin: 0;
   }
 }
 
@@ -65,31 +73,49 @@ body {
 }
 
 .Hero {
-  min-height: 750px;
+  min-height: 00px;
 
-  @media (min-width: $breakpoint-mobile) {
+  @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
     background-image: url(/images/illustration-working.svg);
     background-size: 55%;
     background-repeat: no-repeat;
     background-position: right 10px;
-    min-height: 600px;
+    min-height: 400px;
   }
-
+  @media (min-width: $breakpoint-tablet) {
+    background: none;
+    min-height: 550px;
+  }
+  .contentText {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 425px;
+  }
   .hero-img-container {
     margin: 0 auto;
   }
-
   img {
     display: block;
     height: auto;
-
     margin-left: 20px;
+    @media (min-width: 600px) and (max-width: $breakpoint-tablet) {
+      // display: none;
+    }
+    @media (min-width: $breakpoint-tablet) {
+      display: block;
+      margin: 0;
+    }
   }
 
   .side-crop {
     max-width: 540px;
     overflow: hidden;
     margin: 0 auto;
+    @media (min-width: $breakpoint-mobile) {
+      overflow: visible;
+      margin: 130px 130px 0 0;
+    }
   }
 
   h1 {
@@ -137,21 +163,6 @@ body {
   }
 }
 
-.Input {
-  width: 900px;
-  max-width: 90%;
-  margin: 0 auto;
-  height: 120px;
-  background-color: $primary-violet;
-  position: relative;
-  top: 60px;
-}
-
-// .space {
-//   height: 500px;
-//   position: absolute;
-// }
-
 .Content {
   background-color: $gray;
   text-align: center;
@@ -159,6 +170,19 @@ body {
   @media (min-width: $breakpoint-mobile) {
     text-align: left;
   }
+  .Input {
+    width: 900px;
+    max-width: 90%;
+    margin: 0 auto;
+    height: 120px;
+    background-color: $primary-violet;
+    position: relative;
+    top: -120px;
+  }
+  // .inputActiveState {
+  //   height: 400px;
+  //   background: red;
+  // }
   .backgroundLine {
     p {
       background: $primary-cyan;
@@ -177,7 +201,7 @@ body {
   .div-advanced-statistics {
     width: 380px;
     max-width: 90vw;
-    margin: 0 auto 90px;
+    margin: 70px auto 90px;
   }
   .content-flex-container {
     display: flex;

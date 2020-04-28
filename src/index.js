@@ -37,13 +37,12 @@ ReactDOM.render(
       </div>
     </div>
 
-    <div className="Input">
-      <input type="text" placeholder="Shorten a link here..."></input>
-      <button>Shorten it!</button>
-    </div>
-    <div className="space"></div>
-
     <div className="Content">
+      <div className="Input">
+        <input type="text" placeholder="Shorten a link here..."></input>
+        <button>Shorten it!</button>
+      </div>
+      <div className="inputActiveState"></div>
       <div className="backgroundLine">
         <p></p>
         <p></p>
@@ -58,7 +57,7 @@ ReactDOM.render(
       </div>
       <div className="content-flex-container">
         <div className="Card">
-          <div class="circle">
+          <div className="circle">
             <img src="./images/icon-brand-recognition.svg" alt=""></img>
           </div>
           <div className="cardText">
@@ -71,7 +70,7 @@ ReactDOM.render(
           </div>
         </div>
         <div className="Card">
-          <div class="circle">
+          <div className="circle">
             <img src="./images/icon-detailed-records.svg" alt=""></img>
           </div>
           <div className="cardText">
@@ -84,7 +83,7 @@ ReactDOM.render(
           </div>
         </div>
         <div className="Card">
-          <div class="circle">
+          <div className="circle">
             <img src="./images/icon-fully-customizable.svg" alt=""></img>
           </div>
           <div className="cardText">
@@ -105,7 +104,7 @@ ReactDOM.render(
 
     <div className="Footer">
       <div className="footer-logo center-items-row">
-        <image src="images/logo.svg" />
+        <img src="images/logo.svg" alt="" />
         FOOTER LOGO
       </div>
       <div className="footer-flex-container">
