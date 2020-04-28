@@ -41,8 +41,14 @@ ReactDOM.render(
       <input type="text" placeholder="Shorten a link here..."></input>
       <button>Shorten it!</button>
     </div>
+    <div className="space"></div>
 
     <div className="Content">
+      <div className="backgroundLine">
+        <p></p>
+        <p></p>
+      </div>
+      <p></p>
       <div className="div-advanced-statistics center-items-column">
         <h2>Advanced Statistics</h2>
         <p className="contentText">
@@ -55,36 +61,45 @@ ReactDOM.render(
           <div class="circle">
             <img src="./images/icon-brand-recognition.svg" alt=""></img>
           </div>
-          <h2>Brand Recognition</h2>
-          <p className="contentText">
-            Boost your brand recognition with each click. Generic links don't
-            mean a thing. Branded links help instill confidence in your content.
-          </p>
+          <div className="cardText">
+            <h2>Brand Recognition</h2>
+            <p className="contentText">
+              Boost your brand recognition with each click. Generic links don't
+              mean a thing. Branded links help instill confidence in your
+              content.
+            </p>
+          </div>
         </div>
         <div className="Card">
           <div class="circle">
             <img src="./images/icon-detailed-records.svg" alt=""></img>
           </div>
-          <h2>Detailed Records</h2>
-          <p className="contentText">
-            Gain insights into who is clicking your links. Knowing when and
-            where people engage with your content helps inform better decisions.
-          </p>
+          <div className="cardText">
+            <h2>Detailed Records</h2>
+            <p className="contentText">
+              Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better
+              decisions.
+            </p>
+          </div>
         </div>
         <div className="Card">
           <div class="circle">
             <img src="./images/icon-fully-customizable.svg" alt=""></img>
           </div>
-          <h2>Fully Customizable</h2>
-          <p className="contentText">
-            Improve brand awareness and content discoverability through
-            customizable links, superchargin audience engagement.
-          </p>
+          <div className="cardText">
+            <h2>Fully Customizable</h2>
+            <p className="contentText">
+              Improve brand awareness and content discoverability through
+              customizable links, superchargin audience engagement.
+            </p>
+          </div>
         </div>
       </div>
+
       <div className="content-boost center-items-column">
         <h3>Boost your links today</h3>
-        <button>Get Started</button>
+        <button className="button-getStarted">Get Started</button>
       </div>
     </div>
 

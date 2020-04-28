@@ -36,9 +36,9 @@ body {
 }
 
 // borders for visualizing initial html skeleton
-div {
-  border: 2px solid $primary-cyan;
-}
+// div {
+//   border: 2px solid $primary-cyan;
+// }
 
 .button-getStarted {
   min-width: 210px;
@@ -51,6 +51,7 @@ div {
   border-radius: 50px;
   display: block;
   letter-spacing: 2px;
+  border: none;
 }
 
 .Navbar {
@@ -64,7 +65,7 @@ div {
 }
 
 .Hero {
-  min-height: 900px;
+  min-height: 750px;
 
   @media (min-width: $breakpoint-mobile) {
     background-image: url(/images/illustration-working.svg);
@@ -137,43 +138,46 @@ div {
 }
 
 .Input {
-  width: 300px;
+  width: 900px;
+  max-width: 90%;
   margin: 0 auto;
   height: 120px;
+  background-color: $primary-violet;
+  position: relative;
+  top: 60px;
 }
+
+// .space {
+//   height: 500px;
+//   position: absolute;
+// }
 
 .Content {
   background-color: $gray;
   text-align: center;
-  padding-top: 150px;
+  padding-top: 60px;
   @media (min-width: $breakpoint-mobile) {
     text-align: left;
   }
-  .contentText {
-    color: $neutral-gray;
-    line-height: 2rem;
-    margin: 0;
+  .backgroundLine {
+    p {
+      background: $primary-cyan;
+      height: 5px;
+      transform: rotate(90deg);
+      position: relative;
+      z-index: 0;
+    }
+    :nth-child(1) {
+      top: 500px;
+    }
+    :nth-child(2) {
+      top: 800px;
+    }
   }
   .div-advanced-statistics {
     width: 380px;
     max-width: 90vw;
     margin: 0 auto 90px;
-  }
-  .circle {
-    height: 90px;
-    width: 90px;
-    background-color: $primary-violet;
-    border-radius: 50%;
-    margin: 0 auto;
-    position: relative;
-    bottom: 50px;
-  }
-  img {
-    position: relative;
-    top: 20px;
-    @media (min-width: $breakpoint-mobile) {
-      left: 23px;
-    }
   }
   .content-flex-container {
     display: flex;
@@ -182,7 +186,6 @@ div {
       flex-direction: row;
     }
   }
-
   .content-flex-container:nth-child(1) {
     max-width: 350px;
     margin: 0 auto;
@@ -191,12 +194,53 @@ div {
   .Card {
     width: 400px;
     max-width: 90%;
-    height: 250px;
-    margin: 0 auto;
+    height: 265px;
+    margin: 0 auto 80px auto;
     background-color: white;
+    border-radius: 5px;
+    z-index: 1;
+    .circle {
+      height: 90px;
+      width: 90px;
+      background-color: $primary-violet;
+      border-radius: 50%;
+      margin: 0 auto;
+      position: relative;
+      bottom: 50px;
+    }
+    img {
+      position: relative;
+      top: 20px;
+      @media (min-width: $breakpoint-mobile) {
+        left: 23px;
+      }
+    }
+    .cardText {
+      position: relative;
+      bottom: 40px;
+      margin-top: 15px;
+      h2 {
+        margin: 0;
+      }
+
+      .contentText {
+        color: $neutral-gray;
+        line-height: 1.6rem;
+        margin: 18px 0;
+        padding: 0 30px;
+      }
+    }
   }
   .content-boost {
     background-image: url(/images/bg-boost-mobile.svg);
+    background-size: cover;
+    background-color: $primary-violet;
+    color: white;
+    height: 300px;
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 100px;
+    }
   }
 }
 
