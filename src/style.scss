@@ -72,6 +72,15 @@ body {
   }
 }
 
+.design {
+  position: absolute;
+  opacity: 20%;
+  display: none;
+  z-index: -1;
+  @media (min-width: $breakpoint-mobile) {
+    display: block;
+  }
+}
 .Hero {
   min-height: 00px;
 
@@ -157,7 +166,7 @@ body {
 
   .hero-content {
     @media (min-width: $breakpoint-mobile) {
-      margin: 100px auto;
+      margin: 180px auto 100px;
       width: 85%;
     }
   }

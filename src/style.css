@@ -50,6 +50,19 @@ body {
   display: none;
 }
 
+.design {
+  position: absolute;
+  opacity: 20%;
+  display: none;
+  z-index: -1;
+}
+
+@media (min-width: 601px) {
+  .design {
+    display: block;
+  }
+}
+
 .Hero {
   min-height: 00px;
 }
@@ -155,7 +168,7 @@ body {
 
 @media (min-width: 601px) {
   .Hero .hero-content {
-    margin: 100px auto;
+    margin: 180px auto 100px;
     width: 85%;
   }
 }

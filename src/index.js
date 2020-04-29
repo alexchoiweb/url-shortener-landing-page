@@ -4,6 +4,8 @@ import "./style.css";
 
 ReactDOM.render(
   <React.StrictMode>
+    <img className="design" src="../design/desktop-design.jpg"></img>
+
     <div className="Navbar">
       <div className="Logo">
         <img src="../images/logo.svg" alt="" />
@@ -105,7 +107,6 @@ ReactDOM.render(
     <div className="Footer">
       <div className="footer-logo center-items-row">
         <img src="images/logo.svg" alt="" />
-        FOOTER LOGO
       </div>
       <div className="footer-flex-container">
         <div className="footer-features center-items-column">
