@@ -4,26 +4,31 @@ import "./style.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <img className="design" src="../design/desktop-design.jpg"></img>
-
-    <div className="Navbar">
-      <div className="Logo">
-        <img src="../images/logo.svg" alt="" />
-      </div>
-      <div className="nav-flex-container">
-        <div className="nav-buttons-left">
-          <button>Features</button>
-          <button>Pricing</button>
-          <button>Resources</button>
-        </div>
-        <div className="nav-buttons-right">
-          <button>Login</button>
-          <button>Sign Up</button>
-        </div>
+    <img
+      className="desktop-design"
+      src="design/desktop-design.jpg"
+      alt=""
+    ></img>
+    <img className="mobile-design" src="design/mobile-design.jpg" alt=""></img>
+    <div className="Nav">
+      <img className="Nav__logo" src="../images/logo.svg" alt="" />
+      <i className=" Nav__icon fa fa-bars" aria-hidden="true"></i>
+      <div className="Nav__buttons">
+        <ul className="Nav__buttonsLeft">
+          <li>Features</li>
+          <li>Pricing</li>
+          <li>Resources</li>
+        </ul>
+        <ul className="Nav__buttonsRight">
+          <li>Login</li>
+          <li>
+            <button className="button-cta">Sign Up</button>
+          </li>
+        </ul>
       </div>
     </div>
 
-    <div className="Hero">
+    {/* <div className="Hero">
       <div className="hero-image-container">
         <div className="side-crop hide-desktop">
           <img src="images/illustration-working.svg" alt="" />
@@ -35,11 +40,10 @@ ReactDOM.render(
           Build your brand's recognition and get detailed insights on how your
           links are performing.
         </p>
-        <button className="button-getStarted">Get Started</button>
+        <button className="button-ctaed">Get Started</button>
       </div>
-    </div>
-
-    <div className="Content">
+    </div> */}
+    {/* <div className="Content">
       <div className="Input">
         <input type="text" placeholder="Shorten a link here..."></input>
         <button>Shorten it!</button>
@@ -57,7 +61,7 @@ ReactDOM.render(
           statistics dashboard.
         </p>
       </div>
-      <div className="content-flex-container">
+      <div className="content--container">
         <div className="Card">
           <div className="circle">
             <img src="./images/icon-brand-recognition.svg" alt=""></img>
@@ -100,10 +104,9 @@ ReactDOM.render(
 
       <div className="content-boost center-items-column">
         <h3>Boost your links today</h3>
-        <button className="button-getStarted">Get Started</button>
+        <button className="button-ctaed">Get Started</button>
       </div>
     </div>
-
     <div className="Footer">
       <div className="footer-logo center-items-row">
         <img src="images/logo.svg" alt="" />
@@ -143,7 +146,7 @@ ReactDOM.render(
           </span>
         </div>
       </div>
-    </div>
+    </div> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

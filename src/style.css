@@ -1,56 +1,105 @@
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  font-size: 18px;
+  height: 100vh;
   font-family: "Poppins", sans-serif;
 }
 
-html {
-  font-size: 18px;
-}
-
-body {
-  margin: 0;
-}
-
-@media (min-width: 601px) {
-  .hide-desktop {
-    float: right;
-    position: relative;
-    top: -177px;
-    right: 350px;
-    height: auto;
-    width: 200px;
-    margin: 0;
-  }
-}
-
-.button-getStarted {
+.button-cta {
   min-width: 210px;
   min-height: 55px;
   color: white;
   background-color: #2acfcf;
   margin: 0 auto;
-  font-size: 1rem;
   font-weight: 700;
   border-radius: 50px;
   display: block;
   letter-spacing: 2px;
   border: none;
+  cursor: pointer;
 }
 
-.Navbar {
+.Nav {
   height: 60px;
 }
 
-.Navbar .Logo {
-  width: 160px;
+.Nav__logo {
+  margin: 40px 0 0 23px;
 }
 
-.Navbar .nav-flex-container {
-  display: none;
+@media (min-width: 601px) {
+  .Nav__logo {
+    margin: 54px 0 0 167px;
+  }
 }
 
-.design {
+.Nav__icon {
+  font-size: 1.44em;
+  color: gray;
+  position: absolute;
+  right: 25px;
+  top: 45px;
+}
+
+.Nav__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #3b3054;
+  width: 90%;
+  margin: 10px auto 0;
+  border-radius: 5px;
+  height: 390px;
+}
+
+.Nav__buttonsLeft {
+  margin: 15px auto 10px;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid gray;
+  width: 275px;
+}
+
+.Nav__buttonsRight {
+  margin: 0;
+  padding: 0;
+}
+
+.Nav__buttonsLeft, .Nav__buttonsRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Nav__buttonsLeft li,
+.Nav__buttonsRight li {
+  cursor: pointer;
+  list-style-type: none;
+  color: white;
+  margin: 16px auto;
+  font-size: 1.1em;
+}
+
+.Nav__buttonsLeft li button,
+.Nav__buttonsRight li button {
+  font-size: 1.1em;
+  width: 275px;
+}
+
+.desktop-design {
   position: absolute;
   opacity: 20%;
   display: none;
@@ -58,8 +107,21 @@ body {
 }
 
 @media (min-width: 601px) {
-  .design {
+  .desktop-design {
     display: block;
+  }
+}
+
+.mobile-design {
+  position: absolute;
+  opacity: 20%;
+  z-index: -1;
+  display: inline;
+}
+
+@media (min-width: 601px) {
+  .mobile-design {
+    display: none;
   }
 }
 
