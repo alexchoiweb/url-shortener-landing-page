@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./style.css";
 
+import App from "./App.jsx";
+
 ReactDOM.render(
   <React.StrictMode>
     <img
@@ -10,23 +12,7 @@ ReactDOM.render(
       alt=""
     ></img>
     <img className="mobile-design" src="design/mobile-design.jpg" alt=""></img>
-    <div className="Nav">
-      <img className="Nav__logo" src="../images/logo.svg" alt="" />
-      <i className=" Nav__icon fa fa-bars" aria-hidden="true"></i>
-      <div className="Nav__buttons">
-        <ul className="Nav__buttonsLeft">
-          <li>Features</li>
-          <li>Pricing</li>
-          <li>Resources</li>
-        </ul>
-        <ul className="Nav__buttonsRight">
-          <li>Login</li>
-          <li>
-            <button className="button-cta">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <App />
 
     {/* <div className="Hero">
       <div className="hero-image-container">
