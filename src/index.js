@@ -6,11 +6,11 @@ import App from "./App.jsx";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <img
+    <img
       className="desktop-design"
       src="design/desktop-design.jpg"
       alt=""
-    ></img> */}
+    ></img>
     <img className="mobile-design" src="design/mobile-design.jpg" alt=""></img>
     <App />
 
@@ -27,7 +27,7 @@ ReactDOM.render(
         <button className="button-cta">Get Started</button>
       </div>
     </div>
-    {/* <div className="Content">
+    <div className="Content">
       <div className="Input">
         <input type="text" placeholder="Shorten a link here..."></input>
         <button>Shorten it!</button>
@@ -130,7 +130,7 @@ ReactDOM.render(
           </span>
         </div>
       </div>
-    </div> */}
+    </div>
   </React.StrictMode>,
   document.getElementById("root")
 );
