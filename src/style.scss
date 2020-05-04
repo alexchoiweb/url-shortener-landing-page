@@ -13,8 +13,8 @@ $neutral-blue: hsl(255, 11%, 22%);
 $neutral-violet: hsl(260, 8%, 14%);
 
 // ### Window breakpoints
-$md: 601px;
-$lg: 1051px;
+$md: 600px;
+$lg: 1050px;
 
 // ### font-sizes
 $text-xs: 0.694em;
@@ -42,13 +42,19 @@ html {
 //   border: 2px solid $primary-cyan;
 // }
 
+.hide-desktop {
+  @media (min-width: $md) {
+    display: none;
+  }
+}
+
 .button-cta {
   min-width: 210px;
   min-height: 55px;
   color: white;
   background-color: $primary-cyan;
   margin: 0 auto;
-  // font-size: $text-lg;
+  font-family: "Poppins";
   font-weight: 700;
   border-radius: 50px;
   display: block;
@@ -174,93 +180,107 @@ html {
     display: none;
   }
 }
+
 .Hero {
   min-height: 00px;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $md) {
+    flex-direction: row;
+  }
 
-  @media (min-width: $md) and (max-width: $lg) {
-    background-image: url(/images/illustration-working.svg);
-    background-size: 55%;
-    background-repeat: no-repeat;
-    background-position: right 10px;
-    min-height: 400px;
-  }
-  @media (min-width: $lg) {
-    background: none;
-    min-height: 550px;
-  }
+  // @media (min-width: $md) {
+  //   background-image: url(/images/illustration-working.svg);
+  //   background-size: 725px;
+  //   background-repeat: no-repeat;
+  //   background-position: 830px -65px;
+  //   min-height: 400px;
+  // }
+
   .contentText {
     background-color: white;
     border-radius: 10px;
     padding: 5px;
     max-width: 425px;
   }
-  .hero-img-container {
-    margin: 0 auto;
-  }
-  img {
-    display: block;
-    height: auto;
-    margin-left: 20px;
-    @media (min-width: 600px) and (max-width: $lg) {
-      // display: none;
+  // .side-crop {
+
+  //   @media (min-width: $md) {
+  //     overflow: visible;
+  //   }
+  // }
+  &__imageContainer {
+    @media (min-width: 600px) {
+      display: none;
     }
-    @media (min-width: $lg) {
+    @media (min-width: 1300px) {
       display: block;
-      margin: 0;
+      order: 2;
+      margin: 105px 0 0 0;
+    }
+    img {
+      display: block;
+      height: auto;
+      margin-left: 20px;
+      width: 500px;
+      margin-top: 50px;
+      @media (min-width: $md) {
+        display: block;
+        width: 720px;
+        margin: 0;
+        padding: 0 0 0 100px;
+      }
     }
   }
 
-  .side-crop {
-    max-width: 540px;
-    overflow: hidden;
-    margin: 0 auto;
+  // .button-getStarted {
+  //   margin: 0 auto;
+
+  //   @media (min-width: $md) {
+  //     margin: 0;
+  //   }
+  // }
+
+  .Hero__content {
     @media (min-width: $md) {
-      overflow: visible;
-      margin: 130px 130px 0 0;
+      margin: 173px 0px 112px 11vw;
     }
-  }
-
-  h1 {
-    margin: 10px auto;
-    line-height: 2.2rem;
-    font-size: 2.5rem;
-    text-align: center;
-    max-width: 400px;
-
-    @media (min-width: $md) {
-      margin: 0;
-      text-align: left;
-      font-size: 3rem;
-      line-height: 3rem;
+    &Header {
+      margin: 43px auto 15px;
+      line-height: 2.6rem;
+      font-size: 2.3rem;
+      text-align: center;
+      max-width: 400px;
+      @media (min-width: $md) {
+        margin: 0;
+        text-align: left;
+        font-size: 4.2rem;
+        line-height: 5rem;
+        max-width: 700px;
+      }
     }
-  }
-  p {
-    margin: 0 auto;
-    color: $neutral-gray;
-    margin-bottom: 15px;
-    text-align: center;
-    max-width: 400px;
-    line-height: 1.4rem;
-
-    @media (min-width: $md) {
-      margin: 8px 0 18px 0;
-      text-align: left;
+    &Text {
+      margin: 0 auto;
+      color: $neutral-gray;
+      margin-bottom: 25px;
+      text-align: center;
+      max-width: 335px;
+      line-height: 1.7rem;
+      @media (min-width: $md) {
+        margin: 5px 0 18px 0;
+        text-align: left;
+        font-size: 1.2rem;
+        max-width: 594px;
+        line-height: 1.8rem;
+        letter-spacing: 0.01rem;
+      }
+    }
+    .button-cta {
       font-size: 1.1rem;
-      max-width: 450px;
-    }
-  }
-  .button-getStarted {
-    margin: 0 auto;
-
-    @media (min-width: $md) {
-      margin: 0;
-    }
-  }
-
-  .hero-content {
-    @media (min-width: $md) {
-      margin: 180px auto 100px;
-      width: 85%;
+      min-width: 200px;
+      @media (min-width: $md) {
+        margin: 40px 0 0 0;
+      }
     }
   }
 }
