@@ -11,12 +11,19 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
+@media (min-width: 600px) {
+  .hide-desktop {
+    display: none;
+  }
+}
+
 .button-cta {
   min-width: 210px;
   min-height: 55px;
   color: white;
   background-color: #2acfcf;
   margin: 0 auto;
+  font-family: "Poppins";
   font-weight: 700;
   border-radius: 50px;
   display: block;
@@ -33,7 +40,7 @@ html {
   margin: 40px 0 0 23px;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 600px) {
   .Nav__logo {
     margin: 54px 0 0 11.5%;
   }
@@ -168,7 +175,7 @@ html {
   z-index: -1;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 600px) {
   .desktop-design {
     display: block;
   }
@@ -181,7 +188,7 @@ html {
   display: inline;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 600px) {
   .mobile-design {
     display: none;
   }
@@ -189,22 +196,21 @@ html {
 
 .Hero {
   min-height: 00px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-@media (min-width: 601px) and (max-width: 1051px) {
+@media (min-width: 600px) {
   .Hero {
-    background-image: url(/images/illustration-working.svg);
-    background-size: 55%;
-    background-repeat: no-repeat;
-    background-position: right 10px;
-    min-height: 400px;
-  }
-}
-
-@media (min-width: 1051px) {
-  .Hero {
-    background: none;
-    min-height: 550px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -215,85 +221,91 @@ html {
   max-width: 425px;
 }
 
-.Hero .hero-img-container {
-  margin: 0 auto;
+@media (min-width: 600px) {
+  .Hero__imageContainer {
+    display: none;
+  }
 }
 
-.Hero img {
+@media (min-width: 1300px) {
+  .Hero__imageContainer {
+    display: block;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin: 105px 0 0 0;
+  }
+}
+
+.Hero__imageContainer img {
   display: block;
   height: auto;
   margin-left: 20px;
+  width: 500px;
+  margin-top: 50px;
 }
 
-@media (min-width: 1051px) {
-  .Hero img {
+@media (min-width: 600px) {
+  .Hero__imageContainer img {
     display: block;
+    width: 720px;
     margin: 0;
+    padding: 0 0 0 100px;
   }
 }
 
-.Hero .side-crop {
-  max-width: 540px;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-@media (min-width: 601px) {
-  .Hero .side-crop {
-    overflow: visible;
-    margin: 130px 130px 0 0;
+@media (min-width: 600px) {
+  .Hero .Hero__content {
+    margin: 173px 0px 112px 11vw;
   }
 }
 
-.Hero h1 {
-  margin: 10px auto;
-  line-height: 2.2rem;
-  font-size: 2.5rem;
+.Hero .Hero__contentHeader {
+  margin: 43px auto 15px;
+  line-height: 2.6rem;
+  font-size: 2.3rem;
   text-align: center;
   max-width: 400px;
 }
 
-@media (min-width: 601px) {
-  .Hero h1 {
+@media (min-width: 600px) {
+  .Hero .Hero__contentHeader {
     margin: 0;
     text-align: left;
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 4.2rem;
+    line-height: 5rem;
+    max-width: 700px;
   }
 }
 
-.Hero p {
+.Hero .Hero__contentText {
   margin: 0 auto;
   color: #bfbfbf;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   text-align: center;
-  max-width: 400px;
-  line-height: 1.4rem;
+  max-width: 335px;
+  line-height: 1.7rem;
 }
 
-@media (min-width: 601px) {
-  .Hero p {
-    margin: 8px 0 18px 0;
+@media (min-width: 600px) {
+  .Hero .Hero__contentText {
+    margin: 5px 0 18px 0;
     text-align: left;
-    font-size: 1.1rem;
-    max-width: 450px;
+    font-size: 1.2rem;
+    max-width: 594px;
+    line-height: 1.8rem;
+    letter-spacing: 0.01rem;
   }
 }
 
-.Hero .button-getStarted {
-  margin: 0 auto;
+.Hero .Hero__content .button-cta {
+  font-size: 1.1rem;
+  min-width: 200px;
 }
 
-@media (min-width: 601px) {
-  .Hero .button-getStarted {
-    margin: 0;
-  }
-}
-
-@media (min-width: 601px) {
-  .Hero .hero-content {
-    margin: 180px auto 100px;
-    width: 85%;
+@media (min-width: 600px) {
+  .Hero .Hero__content .button-cta {
+    margin: 40px 0 0 0;
   }
 }
 
@@ -303,7 +315,7 @@ html {
   padding-top: 60px;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 600px) {
   .Content {
     text-align: left;
   }
@@ -352,7 +364,7 @@ html {
           flex-direction: column;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 600px) {
   .Content .content-flex-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -391,7 +403,7 @@ html {
   top: 20px;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 600px) {
   .Content .Card img {
     left: 23px;
   }
