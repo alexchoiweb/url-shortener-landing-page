@@ -1,0 +1,12 @@
+.hide-desktop {
+  @media (min-width: $breakpoint-mobile) {
+    // display: none;
+    float: right;
+    position: relative;
+    top: -177px;
+    right: 350px;
+    height: auto;
+    width: 200px;
+    margin: 0;
+  }
+}

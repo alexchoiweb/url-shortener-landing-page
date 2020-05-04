@@ -3,91 +3,221 @@ $primary-cyan: hsl(180, 66%, 49%);
 $primary-violet: hsl(257, 27%, 26%);
 
 // ### Secondary
-
 $secondary-red: hsl(0, 87%, 67%);
 
 // ### Neutral
-
+$gray: #f0f1f6;
 $neutral-gray: hsl(0, 0%, 75%);
 $neutral-grayish: hsl(257, 7%, 63%);
 $neutral-blue: hsl(255, 11%, 22%);
 $neutral-violet: hsl(260, 8%, 14%);
 
-$breakpoint-mobile: 601px;
+// ### Window breakpoints
+$md: 601px;
+$lg: 1051px;
+
+// ### font-sizes
+$text-xs: 0.694em;
+$text-sm: 0.833em;
+$text-md: 1.1em;
+$text-lg: 1.44em;
+$text-xl: 1.728em;
+$text-xxl: 2.074em;
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  font-size: 18px;
+  height: 100vh;
   font-family: "Poppins", sans-serif;
 }
 
-html {
-  font-size: 18px;
-}
-
-body {
-  margin: 0;
-}
-
-.hide-desktop {
-  @media (min-width: $breakpoint-mobile) {
-    display: none;
-  }
-}
-
 // borders for visualizing initial html skeleton
-div {
-  border: 2px solid $primary-cyan;
-}
+// div {
+//   border: 2px solid $primary-cyan;
+// }
 
-.button-getStarted {
+.button-cta {
   min-width: 210px;
   min-height: 55px;
   color: white;
   background-color: $primary-cyan;
   margin: 0 auto;
-  font-size: 1rem;
+  // font-size: $text-lg;
   font-weight: 700;
   border-radius: 50px;
   display: block;
   letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
 }
 
-.Navbar {
+.Nav {
   height: 60px;
-  .Logo {
-    width: 160px;
+
+  &__logo {
+    margin: 40px 0 0 23px;
+    @media (min-width: $md) {
+      margin: 54px 0 0 11.5%;
+    }
   }
-  .nav-flex-container {
+
+  &__icon {
+    font-size: $text-lg;
+    color: gray;
+    position: absolute;
+    right: 25px;
+    top: 45px;
+    @media (min-width: 750px) {
+      display: none;
+    }
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-violet;
+    width: 90%;
+    max-width: 380px;
+
+    margin: 10px auto 0;
+    border-radius: 5px;
+    height: 390px;
+    &Left {
+      margin: 15px auto 10px;
+      padding: 0 0 10px 0;
+
+      border-bottom: 1px solid gray;
+      width: 275px;
+    }
+    &Right {
+      margin: 0;
+      padding: 0;
+      .button-cta {
+        letter-spacing: 0;
+      }
+    }
+    &Left,
+    &Right {
+      display: flex;
+      flex-direction: column;
+    }
+    &Left li,
+    &Right li {
+      cursor: pointer;
+      list-style-type: none;
+      color: white;
+      margin: 16px auto;
+      font-size: $text-md;
+      button {
+        font-size: $text-md;
+        width: 275px;
+      }
+    }
+  }
+  &__desktop {
+    display: none;
+    @media (min-width: 750px) {
+      display: inline-flex;
+      justify-content: space-between;
+      width: 66%;
+    }
+    ul {
+      display: flex;
+      list-style: none;
+      position: relative;
+      bottom: 11px;
+    }
+    &__buttonsLeft {
+      margin: 0 0 0 0;
+      padding-left: 3vw;
+      li {
+        margin-right: 16px;
+      }
+    }
+    &__buttonsRight {
+      margin: 0;
+      padding: 0;
+      :nth-child(2) {
+        position: relative;
+        bottom: 6px;
+        left: 2.2vw;
+      }
+      button {
+        font-size: $text-sm;
+        min-width: 110px;
+        min-height: 40px;
+      }
+    }
+  }
+}
+
+.desktop-design {
+  position: absolute;
+  opacity: 20%;
+  display: none;
+  z-index: -1;
+  @media (min-width: $md) {
+    display: block;
+  }
+}
+.mobile-design {
+  position: absolute;
+  opacity: 20%;
+  z-index: -1;
+  display: inline;
+  @media (min-width: $md) {
     display: none;
   }
 }
-
 .Hero {
-  min-height: 900px;
+  min-height: 00px;
 
-  @media (min-width: $breakpoint-mobile) {
+  @media (min-width: $md) and (max-width: $lg) {
     background-image: url(/images/illustration-working.svg);
     background-size: 55%;
     background-repeat: no-repeat;
     background-position: right 10px;
-    min-height: 600px;
+    min-height: 400px;
   }
-
+  @media (min-width: $lg) {
+    background: none;
+    min-height: 550px;
+  }
+  .contentText {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 425px;
+  }
   .hero-img-container {
     margin: 0 auto;
   }
-
   img {
     display: block;
     height: auto;
-
     margin-left: 20px;
+    @media (min-width: 600px) and (max-width: $lg) {
+      // display: none;
+    }
+    @media (min-width: $lg) {
+      display: block;
+      margin: 0;
+    }
   }
 
   .side-crop {
     max-width: 540px;
     overflow: hidden;
     margin: 0 auto;
+    @media (min-width: $md) {
+      overflow: visible;
+      margin: 130px 130px 0 0;
+    }
   }
 
   h1 {
@@ -97,7 +227,7 @@ div {
     text-align: center;
     max-width: 400px;
 
-    @media (min-width: $breakpoint-mobile) {
+    @media (min-width: $md) {
       margin: 0;
       text-align: left;
       font-size: 3rem;
@@ -112,7 +242,7 @@ div {
     max-width: 400px;
     line-height: 1.4rem;
 
-    @media (min-width: $breakpoint-mobile) {
+    @media (min-width: $md) {
       margin: 8px 0 18px 0;
       text-align: left;
       font-size: 1.1rem;
@@ -122,54 +252,122 @@ div {
   .button-getStarted {
     margin: 0 auto;
 
-    @media (min-width: $breakpoint-mobile) {
+    @media (min-width: $md) {
       margin: 0;
     }
   }
 
   .hero-content {
-    @media (min-width: $breakpoint-mobile) {
-      margin: 100px auto;
+    @media (min-width: $md) {
+      margin: 180px auto 100px;
       width: 85%;
     }
   }
 }
 
-.Input {
-  width: 300px;
-  margin: 0 auto;
-  height: 120px;
-}
-
 .Content {
-  background-color: $neutral-grayish;
+  background-color: $gray;
   text-align: center;
-  @media (min-width: $breakpoint-mobile) {
+  padding-top: 60px;
+  @media (min-width: $md) {
     text-align: left;
   }
-}
-
-.content-flex-container {
-  display: flex;
-  flex-direction: column;
-  @media (min-width: $breakpoint-mobile) {
-    flex-direction: row;
+  .Input {
+    width: 900px;
+    max-width: 90%;
+    margin: 0 auto;
+    height: 120px;
+    background-color: $primary-violet;
+    position: relative;
+    top: -120px;
   }
-}
+  // .inputActiveState {
+  //   height: 400px;
+  //   background: red;
+  // }
+  .backgroundLine {
+    p {
+      background: $primary-cyan;
+      height: 5px;
+      transform: rotate(90deg);
+      position: relative;
+      z-index: 0;
+    }
+    :nth-child(1) {
+      top: 500px;
+    }
+    :nth-child(2) {
+      top: 800px;
+    }
+  }
+  .div-advanced-statistics {
+    width: 380px;
+    max-width: 90vw;
+    margin: 70px auto 90px;
+  }
+  .content-flex-container {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $md) {
+      flex-direction: row;
+    }
+  }
+  .content-flex-container:nth-child(1) {
+    max-width: 350px;
+    margin: 0 auto;
+  }
 
-.content-flex-container:nth-child(1) {
-  max-width: 350px;
-  margin: 0 auto;
-}
+  .Card {
+    width: 400px;
+    max-width: 90%;
+    height: 265px;
+    margin: 0 auto 80px auto;
+    background-color: white;
+    border-radius: 5px;
+    z-index: 1;
+    .circle {
+      height: 90px;
+      width: 90px;
+      background-color: $primary-violet;
+      border-radius: 50%;
+      margin: 0 auto;
+      position: relative;
+      bottom: 50px;
+    }
+    img {
+      position: relative;
+      top: 20px;
+      @media (min-width: $md) {
+        left: 23px;
+      }
+    }
+    .cardText {
+      position: relative;
+      bottom: 40px;
+      margin-top: 15px;
+      h2 {
+        margin: 0;
+      }
 
-.Card {
-  width: 300px;
-  height: 250px;
-  margin: 0 auto;
-}
-
-.content-boost {
-  background-image: url(/images/bg-boost-mobile.svg);
+      .contentText {
+        color: $neutral-gray;
+        line-height: 1.6rem;
+        margin: 18px 0;
+        padding: 0 30px;
+      }
+    }
+  }
+  .content-boost {
+    background-image: url(/images/bg-boost-mobile.svg);
+    background-size: cover;
+    background-color: $primary-violet;
+    color: white;
+    height: 300px;
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 100px;
+    }
+  }
 }
 
 .footer-features {

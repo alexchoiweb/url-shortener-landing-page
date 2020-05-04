@@ -2,26 +2,19 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./style.css";
 
+import App from "./App.jsx";
+
 ReactDOM.render(
   <React.StrictMode>
-    <div className="Navbar">
-      <div className="Logo">
-        <img src="../images/logo.svg" alt="" />
-      </div>
-      <div className="nav-flex-container">
-        <div className="nav-buttons-left">
-          <button>Features</button>
-          <button>Pricing</button>
-          <button>Resources</button>
-        </div>
-        <div className="nav-buttons-right">
-          <button>Login</button>
-          <button>Sign Up</button>
-        </div>
-      </div>
-    </div>
+    <img
+      className="desktop-design"
+      src="design/desktop-design.jpg"
+      alt=""
+    ></img>
+    <img className="mobile-design" src="design/mobile-design.jpg" alt=""></img>
+    <App />
 
-    <div className="Hero">
+    {/* <div className="Hero">
       <div className="hero-image-container">
         <div className="side-crop hide-desktop">
           <img src="images/illustration-working.svg" alt="" />
@@ -33,59 +26,76 @@ ReactDOM.render(
           Build your brand's recognition and get detailed insights on how your
           links are performing.
         </p>
-        <button className="button-getStarted">Get Started</button>
+        <button className="button-ctaed">Get Started</button>
       </div>
-    </div>
-
-    <div className="Input">
-      <input type="text" placeholder="Shorten a link here..."></input>
-      <button>Shorten it!</button>
-    </div>
-
-    <div className="Content">
-      <div className="Card center-items-column">
+    </div> */}
+    {/* <div className="Content">
+      <div className="Input">
+        <input type="text" placeholder="Shorten a link here..."></input>
+        <button>Shorten it!</button>
+      </div>
+      <div className="inputActiveState"></div>
+      <div className="backgroundLine">
+        <p></p>
+        <p></p>
+      </div>
+      <p></p>
+      <div className="div-advanced-statistics center-items-column">
         <h2>Advanced Statistics</h2>
         <p className="contentText">
           Track how your links are performing across the web with our advanced
           statistics dashboard.
         </p>
       </div>
-      <div className="content-flex-container">
+      <div className="content--container">
         <div className="Card">
-          <img src="./images/icon-brand-recognition.svg" alt=""></img>
-          <h2>Brand Recognition</h2>
-          <p className="contentText">
-            Boost your brand recognition with each click. Generic links don't
-            mean a thing. Branded links help instill confidence in your content.
-          </p>
+          <div className="circle">
+            <img src="./images/icon-brand-recognition.svg" alt=""></img>
+          </div>
+          <div className="cardText">
+            <h2>Brand Recognition</h2>
+            <p className="contentText">
+              Boost your brand recognition with each click. Generic links don't
+              mean a thing. Branded links help instill confidence in your
+              content.
+            </p>
+          </div>
         </div>
         <div className="Card">
-          <img src="./images/icon-brand-recognition.svg" alt=""></img>
-          <h2>Detailed Records</h2>
-          <p className="contentText">
-            Gain insights into who is clicking your links. Knowing when and
-            where people engage with your content helps inform better decisions.
-          </p>
+          <div className="circle">
+            <img src="./images/icon-detailed-records.svg" alt=""></img>
+          </div>
+          <div className="cardText">
+            <h2>Detailed Records</h2>
+            <p className="contentText">
+              Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better
+              decisions.
+            </p>
+          </div>
         </div>
         <div className="Card">
-          <img src="./images/icon-brand-recognition.svg" alt=""></img>
-          <h2>Fully Customizable</h2>
-          <p className="contentText">
-            Improve brand awareness and content discoverability through
-            customizable links, superchargin audience engagement.
-          </p>
+          <div className="circle">
+            <img src="./images/icon-fully-customizable.svg" alt=""></img>
+          </div>
+          <div className="cardText">
+            <h2>Fully Customizable</h2>
+            <p className="contentText">
+              Improve brand awareness and content discoverability through
+              customizable links, superchargin audience engagement.
+            </p>
+          </div>
         </div>
       </div>
+
       <div className="content-boost center-items-column">
         <h3>Boost your links today</h3>
-        <button>Get Started</button>
+        <button className="button-ctaed">Get Started</button>
       </div>
     </div>
-
     <div className="Footer">
       <div className="footer-logo center-items-row">
-        <image src="images/logo.svg" />
-        FOOTER LOGO
+        <img src="images/logo.svg" alt="" />
       </div>
       <div className="footer-flex-container">
         <div className="footer-features center-items-column">
@@ -122,7 +132,7 @@ ReactDOM.render(
           </span>
         </div>
       </div>
-    </div>
+    </div> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
