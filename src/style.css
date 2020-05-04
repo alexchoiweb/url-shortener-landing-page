@@ -35,7 +35,7 @@ html {
 
 @media (min-width: 601px) {
   .Nav__logo {
-    margin: 54px 0 0 167px;
+    margin: 54px 0 0 11.5%;
   }
 }
 
@@ -45,6 +45,12 @@ html {
   position: absolute;
   right: 25px;
   top: 45px;
+}
+
+@media (min-width: 750px) {
+  .Nav__icon {
+    display: none;
+  }
 }
 
 .Nav__buttons {
@@ -57,6 +63,7 @@ html {
           flex-direction: column;
   background-color: #3b3054;
   width: 90%;
+  max-width: 380px;
   margin: 10px auto 0;
   border-radius: 5px;
   height: 390px;
@@ -72,6 +79,10 @@ html {
 .Nav__buttonsRight {
   margin: 0;
   padding: 0;
+}
+
+.Nav__buttonsRight .button-cta {
+  letter-spacing: 0;
 }
 
 .Nav__buttonsLeft, .Nav__buttonsRight {
@@ -97,6 +108,57 @@ html {
 .Nav__buttonsRight li button {
   font-size: 1.1em;
   width: 275px;
+}
+
+.Nav__desktop {
+  display: none;
+}
+
+@media (min-width: 750px) {
+  .Nav__desktop {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 66%;
+  }
+}
+
+.Nav__desktop ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  position: relative;
+  bottom: 11px;
+}
+
+.Nav__desktop__buttonsLeft {
+  margin: 0 0 0 0;
+  padding-left: 3vw;
+}
+
+.Nav__desktop__buttonsLeft li {
+  margin-right: 16px;
+}
+
+.Nav__desktop__buttonsRight {
+  margin: 0;
+  padding: 0;
+}
+
+.Nav__desktop__buttonsRight :nth-child(2) {
+  position: relative;
+  bottom: 6px;
+  left: 2.2vw;
+}
+
+.Nav__desktop__buttonsRight button {
+  font-size: 0.833em;
+  min-width: 110px;
+  min-height: 40px;
 }
 
 .desktop-design {

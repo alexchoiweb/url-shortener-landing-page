@@ -59,25 +59,31 @@ html {
 
 .Nav {
   height: 60px;
+
   &__logo {
     margin: 40px 0 0 23px;
-
     @media (min-width: $md) {
-      margin: 54px 0 0 167px;
+      margin: 54px 0 0 11.5%;
     }
   }
+
   &__icon {
     font-size: $text-lg;
     color: gray;
     position: absolute;
     right: 25px;
     top: 45px;
+    @media (min-width: 750px) {
+      display: none;
+    }
   }
   &__buttons {
     display: flex;
     flex-direction: column;
     background-color: $primary-violet;
     width: 90%;
+    max-width: 380px;
+
     margin: 10px auto 0;
     border-radius: 5px;
     height: 390px;
@@ -91,6 +97,9 @@ html {
     &Right {
       margin: 0;
       padding: 0;
+      .button-cta {
+        letter-spacing: 0;
+      }
     }
     &Left,
     &Right {
@@ -107,6 +116,41 @@ html {
       button {
         font-size: $text-md;
         width: 275px;
+      }
+    }
+  }
+  &__desktop {
+    display: none;
+    @media (min-width: 750px) {
+      display: inline-flex;
+      justify-content: space-between;
+      width: 66%;
+    }
+    ul {
+      display: flex;
+      list-style: none;
+      position: relative;
+      bottom: 11px;
+    }
+    &__buttonsLeft {
+      margin: 0 0 0 0;
+      padding-left: 3vw;
+      li {
+        margin-right: 16px;
+      }
+    }
+    &__buttonsRight {
+      margin: 0;
+      padding: 0;
+      :nth-child(2) {
+        position: relative;
+        bottom: 6px;
+        left: 2.2vw;
+      }
+      button {
+        font-size: $text-sm;
+        min-width: 110px;
+        min-height: 40px;
       }
     }
   }
