@@ -45,3 +45,4 @@ For the social icons, you can either use the SVGs provided or a font icon librar
 - [Ionicons](https://ionicons.com)
 
 Nav: 1hr
+Hero: 1hr
