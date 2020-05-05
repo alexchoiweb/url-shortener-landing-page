@@ -17,26 +17,26 @@ ReactDOM.render(
         ></input>
         <button className="Content__inputButton button-cta">Shorten it!</button>
       </div>
-      <div className="inputActiveState"></div>
+      {/* <div className="inputActiveState"></div> */}
 
       <div className="backgroundLine">
         <p></p>
         <p></p>
       </div>
-      <p></p>
-      <div className="div-advanced-statistics center-items-column">
+
+      <div className="Content__header center-items-column">
         <h2>Advanced Statistics</h2>
         <p className="contentText">
           Track how your links are performing across the web with our advanced
           statistics dashboard.
         </p>
       </div>
-      <div className="content--container">
-        <div className="Card">
+      <div className="Content__cardsContainer">
+        <div className="Content__card">
           <div className="circle">
             <img src="./images/icon-brand-recognition.svg" alt=""></img>
           </div>
-          <div className="cardText">
+          <div className="Content__cardText">
             <h2>Brand Recognition</h2>
             <p className="contentText">
               Boost your brand recognition with each click. Generic links don't
@@ -45,11 +45,11 @@ ReactDOM.render(
             </p>
           </div>
         </div>
-        <div className="Card">
+        <div className="Content__card">
           <div className="circle">
             <img src="./images/icon-detailed-records.svg" alt=""></img>
           </div>
-          <div className="cardText">
+          <div className="Content__cardText">
             <h2>Detailed Records</h2>
             <p className="contentText">
               Gain insights into who is clicking your links. Knowing when and
@@ -58,11 +58,11 @@ ReactDOM.render(
             </p>
           </div>
         </div>
-        <div className="Card">
+        <div className="Content__card">
           <div className="circle">
             <img src="./images/icon-fully-customizable.svg" alt=""></img>
           </div>
-          <div className="cardText">
+          <div className="Content__cardText">
             <h2>Fully Customizable</h2>
             <p className="contentText">
               Improve brand awareness and content discoverability through
@@ -72,9 +72,9 @@ ReactDOM.render(
         </div>
       </div>
 
-      <div className="content-boost center-items-column">
+      <div className="Content__cta center-items-column">
         <h3>Boost your links today</h3>
-        <button className="button-ctaed">Get Started</button>
+        <button className="Content__ctaButton button-cta">Get Started</button>
       </div>
     </div>
     {/* <div className="Footer">

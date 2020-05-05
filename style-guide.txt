@@ -46,4 +46,4 @@ For the social icons, you can either use the SVGs provided or a font icon librar
 
 Nav: 1hr
 Hero: 1hr
-Content: .5hr
+Content: 1hr
