@@ -34,6 +34,11 @@ html {
 
 .Nav {
   height: 60px;
+  width: 100%;
+}
+
+.Nav__desktopContainer {
+  width: 100%;
 }
 
 .Nav__logo {
@@ -129,7 +134,7 @@ html {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 66%;
+    width: 66vw;
   }
 }
 
@@ -221,6 +226,17 @@ html {
   max-width: 425px;
 }
 
+.Hero .side-crop {
+  max-width: 95vw;
+  overflow: hidden;
+}
+
+@media (min-width: 600px) {
+  .Hero .side-crop {
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 600px) {
   .Hero__imageContainer {
     display: none;
@@ -249,8 +265,8 @@ html {
   .Hero__imageContainer img {
     display: block;
     width: 720px;
-    margin: 0;
-    padding: 0 0 0 100px;
+    margin: 2px 0 0 56px;
+    padding: 0;
   }
 }
 

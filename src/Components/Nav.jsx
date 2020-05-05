@@ -5,19 +5,21 @@ export default function Nav() {
 
   return (
     <div className="Nav">
-      <img className="Nav__logo" src="../images/logo.svg" alt="" />
-      <div className="Nav__desktop">
-        <ul className="Nav__desktop__buttonsLeft">
-          <li>Features</li>
-          <li>Pricing</li>
-          <li>Resources</li>
-        </ul>
-        <ul className="Nav__desktop__buttonsRight">
-          <li>Login</li>
-          <li>
-            <button className="button-cta">Sign Up</button>
-          </li>
-        </ul>
+      <div className="Nav__desktopContainer">
+        <img className="Nav__logo" src="../images/logo.svg" alt="" />
+        <div className="Nav__desktop">
+          <ul className="Nav__desktop__buttonsLeft">
+            <li>Features</li>
+            <li>Pricing</li>
+            <li>Resources</li>
+          </ul>
+          <ul className="Nav__desktop__buttonsRight">
+            <li>Login</li>
+            <li>
+              <button className="button-cta">Sign Up</button>
+            </li>
+          </ul>
+        </div>
       </div>
       <i
         className=" Nav__icon fa fa-bars"

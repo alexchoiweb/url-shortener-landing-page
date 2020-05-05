@@ -6,28 +6,9 @@ import App from "./App.jsx";
 
 ReactDOM.render(
   <React.StrictMode>
-    <img
-      className="desktop-design"
-      src="design/desktop-design.jpg"
-      alt=""
-    ></img>
-    <img className="mobile-design" src="design/mobile-design.jpg" alt=""></img>
     <App />
 
-    <div className="Hero">
-      <div className="Hero__imageContainer">
-        <img src="images/illustration-working.svg" alt="" />
-      </div>
-      <div className="Hero__content">
-        <h1 className="Hero__contentHeader">More than just shorter links</h1>
-        <p className="Hero__contentText">
-          Build your brand's recognition and get detailed insights on how your
-          links are performing.
-        </p>
-        <button className="button-cta">Get Started</button>
-      </div>
-    </div>
-    <div className="Content">
+    {/* <div className="Content">
       <div className="Input">
         <input type="text" placeholder="Shorten a link here..."></input>
         <button>Shorten it!</button>
@@ -90,8 +71,8 @@ ReactDOM.render(
         <h3>Boost your links today</h3>
         <button className="button-ctaed">Get Started</button>
       </div>
-    </div>
-    <div className="Footer">
+    </div> */}
+    {/* <div className="Footer">
       <div className="footer-logo center-items-row">
         <img src="images/logo.svg" alt="" />
       </div>
@@ -130,7 +111,7 @@ ReactDOM.render(
           </span>
         </div>
       </div>
-    </div>
+    </div> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
