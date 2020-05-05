@@ -186,11 +186,11 @@ html {
 }
 
 .Hero {
-  min-height: 00px;
   display: flex;
   flex-direction: column;
   @media (min-width: $md) {
     flex-direction: row;
+    min-height: 715px;
   }
   .contentText {
     background-color: white;
@@ -230,6 +230,7 @@ html {
   }
 
   .Hero__content {
+    margin-bottom: 150px;
     @media (min-width: $md) {
       margin: 173px 0px 112px 11vw;
     }
@@ -276,18 +277,62 @@ html {
 .Content {
   background-color: $gray;
   text-align: center;
-  padding-top: 60px;
+  padding-top: 25px;
   @media (min-width: $md) {
     text-align: left;
   }
-  .Input {
+  * {
+    z-index: 1;
+  }
+  &__inputContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 900px;
     max-width: 90%;
-    margin: 0 auto;
+    min-height: 170px;
+    margin: 20px auto 0;
     height: 120px;
-    background-color: $primary-violet;
+    border-radius: 8px;
+    background-image: url(/images/bg-shorten-mobile.svg);
+    background-repeat: no-repeat;
+    background-color: $neutral-violet;
     position: relative;
     top: -120px;
+    @media (min-width: $md) {
+      width: 80%;
+      background-image: url(/images/bg-shorten-desktop.svg);
+      flex-direction: row;
+    }
+    * {
+      width: 85%;
+      border-radius: 5px;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+  }
+  &__input {
+    height: 50px;
+    padding: 0 0 0 13px;
+    font-size: 1.2rem;
+    @media (min-width: $md) {
+      width: 50%;
+    }
+    @media (min-width: $lg) {
+      width: 70%;
+    }
+  }
+  &__input::placeholder {
+    color: $neutral-gray;
+  }
+  &__inputButton {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    @media (min-width: $md) {
+      width: 200px;
+      margin: 0 0 0 15px;
+    }
   }
   // .inputActiveState {
   //   height: 400px;

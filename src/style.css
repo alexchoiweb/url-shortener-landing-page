@@ -200,7 +200,6 @@ html {
 }
 
 .Hero {
-  min-height: 00px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -216,6 +215,7 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    min-height: 715px;
   }
 }
 
@@ -268,6 +268,10 @@ html {
     margin: 2px 0 0 56px;
     padding: 0;
   }
+}
+
+.Hero .Hero__content {
+  margin-bottom: 150px;
 }
 
 @media (min-width: 600px) {
@@ -328,7 +332,7 @@ html {
 .Content {
   background-color: #f0f1f6;
   text-align: center;
-  padding-top: 60px;
+  padding-top: 25px;
 }
 
 @media (min-width: 600px) {
@@ -337,14 +341,99 @@ html {
   }
 }
 
-.Content .Input {
+.Content * {
+  z-index: 1;
+}
+
+.Content__inputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 900px;
   max-width: 90%;
-  margin: 0 auto;
+  min-height: 170px;
+  margin: 20px auto 0;
   height: 120px;
-  background-color: #3b3054;
+  border-radius: 8px;
+  background-image: url(/images/bg-shorten-mobile.svg);
+  background-repeat: no-repeat;
+  background-color: #232127;
   position: relative;
   top: -120px;
+}
+
+@media (min-width: 600px) {
+  .Content__inputContainer {
+    width: 80%;
+    background-image: url(/images/bg-shorten-desktop.svg);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.Content__inputContainer * {
+  width: 85%;
+  border-radius: 5px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.Content__input {
+  height: 50px;
+  padding: 0 0 0 13px;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 600px) {
+  .Content__input {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1050px) {
+  .Content__input {
+    width: 70%;
+  }
+}
+
+.Content__input::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.Content__input:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.Content__input::-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.Content__input::placeholder {
+  color: #bfbfbf;
+}
+
+.Content__inputButton {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 600px) {
+  .Content__inputButton {
+    width: 200px;
+    margin: 0 0 0 15px;
+  }
 }
 
 .Content .backgroundLine p {

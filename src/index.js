@@ -8,12 +8,17 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
 
-    {/* <div className="Content">
-      <div className="Input">
-        <input type="text" placeholder="Shorten a link here..."></input>
-        <button>Shorten it!</button>
+    <div className="Content">
+      <div className="Content__inputContainer">
+        <input
+          className="Content__input"
+          type="text"
+          placeholder="Shorten a link here..."
+        ></input>
+        <button className="Content__inputButton button-cta">Shorten it!</button>
       </div>
       <div className="inputActiveState"></div>
+
       <div className="backgroundLine">
         <p></p>
         <p></p>
@@ -71,7 +76,7 @@ ReactDOM.render(
         <h3>Boost your links today</h3>
         <button className="button-ctaed">Get Started</button>
       </div>
-    </div> */}
+    </div>
     {/* <div className="Footer">
       <div className="footer-logo center-items-row">
         <img src="images/logo.svg" alt="" />
