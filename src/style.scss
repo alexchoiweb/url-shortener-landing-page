@@ -69,11 +69,10 @@ html {
     height: 5px;
     transform: rotate(90deg);
     position: relative;
-    z-index: 0;
+    z-index: -1;
   }
   :nth-child(1) {
     top: 500px;
-    z-index: 0;
   }
   :nth-child(2) {
     top: 800px;
