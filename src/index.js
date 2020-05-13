@@ -19,10 +19,10 @@ ReactDOM.render(
       </div>
       {/* <div className="inputActiveState"></div> */}
 
-      <div className="backgroundLine">
+      {/* <div className="backgroundLine">
         <p></p>
         <p></p>
-      </div>
+      </div> */}
 
       <div className="Content__header center-items-column">
         <h2>Advanced Statistics</h2>

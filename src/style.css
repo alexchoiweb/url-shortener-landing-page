@@ -32,17 +32,13 @@ html {
   cursor: pointer;
 }
 
-.backgroundLine {
-  z-index: 0;
-}
-
 .backgroundLine p {
   background: #2acfcf;
   height: 5px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 
 .backgroundLine :nth-child(1) {
@@ -61,6 +57,12 @@ html {
   margin: 0 auto;
   position: relative;
   bottom: 50px;
+}
+
+@media (min-width: 1050px) {
+  .circle {
+    margin-left: 30px;
+  }
 }
 
 .center-items-column {
@@ -383,11 +385,12 @@ html {
 }
 
 .Content {
+  background-color: #f0f1f6;
   text-align: center;
   padding-top: 25px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1050px) {
   .Content {
     text-align: left;
   }
@@ -487,11 +490,59 @@ html {
 .Content__header {
   width: 380px;
   max-width: 90vw;
-  margin: -115px auto 90px;
+  margin: -55px auto 90px;
+}
+
+@media (min-width: 600px) {
+  .Content__header {
+    width: 545px;
+  }
+}
+
+@media (min-width: 600px) {
+  .Content__header h2 {
+    font-size: 2.074em;
+  }
 }
 
 .Content__header * {
   margin-bottom: 5px;
+}
+
+@media (min-width: 600px) {
+  .Content__header .contentText {
+    margin-top: 10px;
+    text-align: center;
+    color: #bfbfbf;
+  }
+}
+
+@media (min-width: 1050px) {
+  .Content__cardsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    top: 30px;
+    margin-bottom: 70px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .Content__cardsContainer div.Content__card:nth-child(1) {
+    position: relative;
+    top: -50px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .Content__cardsContainer div.Content__card:nth-child(3) {
+    position: relative;
+    top: 50px;
+  }
 }
 
 .Content__card {
@@ -500,7 +551,16 @@ html {
   margin: 0 auto 75px auto;
   background-color: white;
   border-radius: 5px;
-  z-index: 2;
+}
+
+@media (min-width: 1050px) {
+  .Content__card {
+    margin: 0 15px 125px 15px;
+  }
+}
+
+.Content__card * {
+  z-index: 5;
 }
 
 .Content__card img {
@@ -508,7 +568,7 @@ html {
   top: 20px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1050px) {
   .Content__card img {
     left: 23px;
   }
@@ -521,7 +581,13 @@ html {
 }
 
 .Content__cardText h2 {
-  margin: 0;
+  margin: 0 auto;
+}
+
+@media (min-width: 1050px) {
+  .Content__cardText h2 {
+    margin-left: 30px;
+  }
 }
 
 .Content__cardText .contentText {
