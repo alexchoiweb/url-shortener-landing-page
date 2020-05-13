@@ -42,12 +42,12 @@ html {
 //   border: 2px solid $primary-cyan;
 // }
 
+// Utility classes
 .hide-desktop {
   @media (min-width: $md) {
     display: none;
   }
 }
-
 .button-cta {
   min-width: 210px;
   min-height: 55px;
@@ -61,6 +61,42 @@ html {
   letter-spacing: 2px;
   border: none;
   cursor: pointer;
+}
+.backgroundLine {
+  p {
+    background: $primary-cyan;
+    height: 5px;
+    transform: rotate(90deg);
+    position: relative;
+    z-index: 1;
+  }
+  :nth-child(1) {
+    top: 500px;
+  }
+  :nth-child(2) {
+    top: 800px;
+  }
+}
+.circle {
+  height: 90px;
+  width: 90px;
+  background-color: $primary-violet;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  bottom: 50px;
+  @media (min-width: $lg) {
+    margin-left: 30px;
+  }
+}
+.center-items-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.center-items-row {
+  display: flex;
+  justify-content: center;
 }
 
 .Nav {
@@ -186,11 +222,11 @@ html {
 }
 
 .Hero {
-  min-height: 00px;
   display: flex;
   flex-direction: column;
   @media (min-width: $md) {
     flex-direction: row;
+    min-height: 715px;
   }
   .contentText {
     background-color: white;
@@ -230,11 +266,12 @@ html {
   }
 
   .Hero__content {
+    margin-bottom: 150px;
     @media (min-width: $md) {
       margin: 173px 0px 112px 11vw;
     }
     &Header {
-      margin: 43px auto 15px;
+      margin: 40px auto 15px;
       line-height: 2.6rem;
       font-size: 2.3rem;
       text-align: center;
@@ -276,96 +313,145 @@ html {
 .Content {
   background-color: $gray;
   text-align: center;
-  padding-top: 60px;
-  @media (min-width: $md) {
+  padding-top: 25px;
+  @media (min-width: $lg) {
     text-align: left;
   }
-  .Input {
-    width: 900px;
-    max-width: 90%;
-    margin: 0 auto;
-    height: 120px;
-    background-color: $primary-violet;
-    position: relative;
-    top: -120px;
-  }
-  // .inputActiveState {
-  //   height: 400px;
-  //   background: red;
-  // }
-  .backgroundLine {
-    p {
-      background: $primary-cyan;
-      height: 5px;
-      transform: rotate(90deg);
-      position: relative;
-      z-index: 0;
-    }
-    :nth-child(1) {
-      top: 500px;
-    }
-    :nth-child(2) {
-      top: 800px;
-    }
-  }
-  .div-advanced-statistics {
-    width: 380px;
-    max-width: 90vw;
-    margin: 70px auto 90px;
-  }
-  .content-flex-container {
+  &__inputContainer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    max-width: 90%;
+    min-height: 170px;
+    margin: 20px auto 0;
+    height: 120px;
+    border-radius: 8px;
+    background-image: url(/images/bg-shorten-mobile.svg);
+    background-repeat: no-repeat;
+    background-color: $neutral-violet;
+    position: relative;
+    top: -120px;
     @media (min-width: $md) {
+      width: 80%;
+      background-image: url(/images/bg-shorten-desktop.svg);
       flex-direction: row;
     }
+    * {
+      width: 85%;
+      border-radius: 5px;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
   }
-  .content-flex-container:nth-child(1) {
-    max-width: 350px;
-    margin: 0 auto;
+  &__input {
+    height: 50px;
+    padding: 0 0 0 13px;
+    font-size: 1.2rem;
+    @media (min-width: $md) {
+      width: 50%;
+    }
+    @media (min-width: $lg) {
+      width: 70%;
+    }
   }
-
-  .Card {
+  &__input::placeholder {
+    color: $neutral-gray;
+  }
+  &__inputButton {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    @media (min-width: $md) {
+      width: 200px;
+      margin: 0 0 0 15px;
+    }
+  }
+  &__header {
+    width: 380px;
+    max-width: 90vw;
+    margin: -55px auto 90px;
+    @media (min-width: $md) {
+      width: 545px;
+    }
+    h2 {
+      @media (min-width: $md) {
+        font-size: $text-xxl;
+      }
+    }
+    * {
+      margin-bottom: 5px;
+    }
+    .contentText {
+      @media (min-width: $md) {
+        margin-top: 10px;
+        text-align: center;
+        color: $neutral-gray;
+      }
+    }
+  }
+  &__cardsContainer {
+    @media (min-width: $lg) {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      top: 30px;
+      margin-bottom: 70px;
+    }
+    div.Content__card:nth-child(1) {
+      @media (min-width: $lg) {
+        position: relative;
+        top: -50px;
+      }
+    }
+    div.Content__card:nth-child(3) {
+      @media (min-width: $lg) {
+        position: relative;
+        top: 50px;
+      }
+    }
+  }
+  &__card {
     width: 400px;
     max-width: 90%;
-    height: 265px;
-    margin: 0 auto 80px auto;
+    margin: 0 auto 75px auto;
     background-color: white;
     border-radius: 5px;
-    z-index: 1;
-    .circle {
-      height: 90px;
-      width: 90px;
-      background-color: $primary-violet;
-      border-radius: 50%;
-      margin: 0 auto;
-      position: relative;
-      bottom: 50px;
+
+    @media (min-width: $lg) {
+      margin: 0 15px 125px 15px;
+    }
+
+    * {
+      z-index: 5;
     }
     img {
       position: relative;
       top: 20px;
-      @media (min-width: $md) {
+      @media (min-width: $lg) {
         left: 23px;
       }
     }
-    .cardText {
+    &Text {
       position: relative;
       bottom: 40px;
       margin-top: 15px;
       h2 {
-        margin: 0;
+        margin: 0 auto;
+        @media (min-width: $lg) {
+          margin-left: 30px;
+        }
       }
 
       .contentText {
         color: $neutral-gray;
-        line-height: 1.6rem;
-        margin: 18px 0;
+        line-height: 1.4rem;
+        margin: 13px 0;
         padding: 0 30px;
       }
     }
   }
-  .content-boost {
+  &__cta {
     background-image: url(/images/bg-boost-mobile.svg);
     background-size: cover;
     background-color: $primary-violet;
@@ -373,7 +459,12 @@ html {
     height: 300px;
     h3 {
       font-size: 1.5rem;
-      margin-top: 100px;
+      margin: 100px 0 20px 0;
+    }
+    &Button {
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0;
     }
   }
 }
@@ -382,17 +473,6 @@ html {
   a {
     display: block;
   }
-}
-
-.center-items-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.center-items-row {
-  display: flex;
-  justify-content: center;
 }
 
 .footer-logos {

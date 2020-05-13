@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Design() {
   return (
-    <>
+    <div className="Design">
       <img
         className="desktop-design"
         src="design/desktop-design.jpg"
@@ -13,6 +13,6 @@ export default function Design() {
         src="design/mobile-design.jpg"
         alt=""
       ></img>
-    </>
+    </div>
   );
 }
