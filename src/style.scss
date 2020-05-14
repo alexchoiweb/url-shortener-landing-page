@@ -43,6 +43,9 @@ html {
 // }
 
 // Utility classes
+.fill-white {
+  fill: white;
+}
 .hide-desktop {
   @media (min-width: $md) {
     display: none;
@@ -469,12 +472,68 @@ html {
   }
 }
 
-.footer-features {
-  a {
-    display: block;
+.Footer {
+  background: $neutral-violet;
+  color: white;
+  // color: blue;
+  height: 790px;
+  @media (min-width: $lg) {
+    height: 320px;
   }
-}
 
-.footer-logos {
-  height: 100px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: $lg) {
+      flex-direction: row;
+    }
+    &-links {
+      margin-top: 20px;
+      @media (min-width: $lg) {
+        display: flex;
+        flex-direction: row;
+        margin: 57px 0 0 13vw;
+        div:nth-child(-n + 3) {
+          margin-right: 66px;
+        }
+      }
+
+      div:not(:last-child) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: $lg) {
+          align-items: flex-start;
+        }
+      }
+      h3 {
+        margin-bottom: 15px;
+      }
+      p {
+        margin: 4px;
+        cursor: pointer;
+      }
+    }
+  }
+  &__logo {
+    margin-top: 60px;
+    @media (min-width: $lg) {
+      margin: -65px 0 0 11.2vw;
+    }
+    &-img {
+      fill: white;
+    }
+  }
+  &__social {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    span {
+      margin: 0 12px;
+    }
+    img {
+      cursor: pointer;
+    }
+  }
 }
