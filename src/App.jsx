@@ -1,6 +1,7 @@
 import React from "react";
 
 import Nav from "./Components/Nav";
+import Footer from "./Components/Footer";
 import Design from "./Components/Design";
 
 export default function App() {
@@ -90,6 +91,7 @@ export default function App() {
           <button className="Content__ctaButton button-cta">Get Started</button>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

@@ -11,6 +11,10 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
+.fill-white {
+  fill: white;
+}
+
 @media (min-width: 600px) {
   .hide-desktop {
     display: none;

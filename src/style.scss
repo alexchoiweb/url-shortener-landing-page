@@ -43,6 +43,9 @@ html {
 // }
 
 // Utility classes
+.fill-white {
+  fill: white;
+}
 .hide-desktop {
   @media (min-width: $md) {
     display: none;
