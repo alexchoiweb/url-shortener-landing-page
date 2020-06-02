@@ -43,6 +43,14 @@ html {
 // }
 
 // Utility classes
+.input-error {
+  border: 3px solid $secondary-red;
+}
+.input-error::placeholder {
+  color: $secondary-red !important;
+  opacity: 0.5;
+}
+
 .fill-white {
   fill: white;
 }
@@ -329,8 +337,8 @@ html {
     max-width: 90%;
     min-height: 170px;
     margin: 20px auto 0;
-    height: 120px;
     border-radius: 8px;
+    padding: 30px 0;
     background-image: url(/images/bg-shorten-mobile.svg);
     background-repeat: no-repeat;
     background-color: $neutral-violet;
@@ -362,6 +370,12 @@ html {
   &__input::placeholder {
     color: $neutral-gray;
   }
+  &__invalidInput {
+    color: $secondary-red;
+    opacity: 0.5;
+    margin: 7px 0 10px 0;
+    text-align: left;
+  }
   &__inputButton {
     margin-top: 10px;
     font-size: 1.2rem;
@@ -370,6 +384,17 @@ html {
       margin: 0 0 0 15px;
     }
   }
+  &__linkContainer {
+    position: relative;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & .Link:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
   &__header {
     width: 380px;
     max-width: 90vw;
@@ -469,6 +494,28 @@ html {
       font-weight: 400;
       letter-spacing: 0;
     }
+  }
+}
+
+.Link {
+  background: white;
+  color: black;
+  width: 90%;
+  border-radius: 8px;
+  &__originalLink {
+    border-bottom: 1px solid $neutral-grayish;
+    padding-bottom: 15px;
+  }
+  &__shortLink {
+    color: $primary-cyan;
+  }
+  &__copyButton {
+    width: 85%;
+    border-radius: 5px;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
   }
 }
 

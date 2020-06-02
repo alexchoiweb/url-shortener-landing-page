@@ -3,6 +3,7 @@ import React from "react";
 import Nav from "./Components/Nav";
 import URLInput from "./Components/URLInput";
 import Footer from "./Components/Footer";
+// eslint-disable-next-line
 import Design from "./Components/Design";
 
 export default function App() {
