@@ -48,3 +48,5 @@ Nav: 1hr
 Hero: 1hr
 Content: 1.75hr
 Footer: 1hr
+
+Functionality: 
