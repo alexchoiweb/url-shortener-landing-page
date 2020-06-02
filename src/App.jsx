@@ -1,6 +1,7 @@
 import React from "react";
 
 import Nav from "./Components/Nav";
+import URLInput from "./Components/URLInput";
 import Footer from "./Components/Footer";
 import Design from "./Components/Design";
 
@@ -23,22 +24,7 @@ export default function App() {
         </div>
       </div>
       <div className="Content">
-        <div className="Content__inputContainer">
-          <input
-            className="Content__input"
-            type="text"
-            placeholder="Shorten a link here..."
-          ></input>
-          <button className="Content__inputButton button-cta">
-            Shorten it!
-          </button>
-        </div>
-        {/* <div className="inputActiveState"></div> */}
-
-        {/* <div className="backgroundLine">
-        <p></p>
-        <p></p>
-      </div> */}
+        <URLInput />
         <div className="Content__header center-items-column">
           <h2>Advanced Statistics</h2>
           <p className="contentText">
