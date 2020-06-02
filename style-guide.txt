@@ -49,4 +49,4 @@ Hero: 1hr
 Content: 1.75hr
 Footer: 1hr
 
-Functionality: 
+Functionality: 0.5hr
