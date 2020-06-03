@@ -537,6 +537,13 @@ html {
           align-items: center;
 }
 
+@media (min-width: 600px) {
+  .Content__linkContainer {
+    width: 89%;
+    margin: 0 auto;
+  }
+}
+
 .Content__linkContainer .Link:not(:first-child) {
   margin-top: 20px;
 }
@@ -677,13 +684,60 @@ html {
   border-radius: 8px;
 }
 
+@media (min-width: 1050px) {
+  .Link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .Link__originalLink {
   border-bottom: 1px solid #9e9aa7;
   padding-bottom: 15px;
 }
 
+@media (min-width: 1050px) {
+  .Link__originalLink {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-left: 20px;
+  }
+}
+
 .Link__shortLink {
   color: #2acfcf;
+}
+
+@media (min-width: 1050px) {
+  .Link__shortLink {
+    margin-right: 20px;
+  }
+}
+
+.Link__shortLinkContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1050px) {
+  .Link__shortLinkContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .Link__copyButton {
@@ -693,6 +747,16 @@ html {
   letter-spacing: 0;
   font-size: 1.2rem;
   margin-bottom: 20px;
+}
+
+@media (min-width: 1050px) {
+  .Link__copyButton {
+    width: 115px;
+    margin: 10px 20px 10px 0;
+    min-width: 100px !important;
+    font-size: 18px;
+    min-height: 45px !important;
+  }
 }
 
 .Footer {
