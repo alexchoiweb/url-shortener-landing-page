@@ -9,15 +9,15 @@ export default function Link(props) {
 
   return (
     <div className="Link">
-      <p className="Link__originalLink">{props.link[0]}</p>
-      <p className="Link__shortLink">{props.link[1]}</p>
+      <p className="Link__originalLink">{props.urls.originalLink}</p>
+      <p className="Link__shortLink">{props.urls.shortLink}</p>
       <input
         readOnly
         type="text"
         // style={{ display: "none" }}
         style={{ position: "absolute", left: "-1000px" }}
         id={props.id}
-        value={props.link[1]}
+        value={props.urls.shortLink}
       ></input>
       <button className="Link__copyButton button-cta" onClick={copy}>
         Copy

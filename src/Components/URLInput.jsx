@@ -52,8 +52,11 @@ export default function URLInput() {
           return res.json();
         })
         .then((data) => {
-          const link = [url, `https://rel.ink/${data.hashid}`];
-          setLinks([...links, link]);
+          const linksObj = {
+            originalLink: url,
+            shortLink: `https://rel.ink/${data.hashid}`,
+          };
+          setLinks([...links, linksObj]);
         })
         .catch((err) => console.log(err));
     }
@@ -74,7 +77,7 @@ export default function URLInput() {
       </div>
       <div className="Content__linkContainer">
         {links.map((link, index) => {
-          return <Link link={link} key={index} id={index} />;
+          return <Link urls={link} key={index} id={index} />;
         })}
       </div>
     </>
