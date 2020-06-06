@@ -469,7 +469,18 @@ html {
   letter-spacing: 0;
 }
 
+.Content__inputSubContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .Content__input {
+  width: 100%;
   height: 50px;
   padding: 0 0 0 13px;
   font-size: 1.2rem;
@@ -477,13 +488,8 @@ html {
 
 @media (min-width: 600px) {
   .Content__input {
-    width: 50%;
-  }
-}
-
-@media (min-width: 1050px) {
-  .Content__input {
-    width: 70%;
+    width: 80%;
+    margin-left: 50px;
   }
 }
 
@@ -510,6 +516,14 @@ html {
   text-align: left;
 }
 
+@media (min-width: 600px) {
+  .Content__invalidInput {
+    position: absolute;
+    top: 105px;
+    left: 50px;
+  }
+}
+
 .Content__inputButton {
   margin-top: 10px;
   font-size: 1.2rem;
@@ -518,7 +532,7 @@ html {
 @media (min-width: 600px) {
   .Content__inputButton {
     width: 200px;
-    margin: 0 0 0 15px;
+    margin: 0 50px 0 15px;
   }
 }
 
@@ -535,6 +549,13 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (min-width: 600px) {
+  .Content__linkContainer {
+    width: 89%;
+    margin: 0 auto;
+  }
 }
 
 .Content__linkContainer .Link:not(:first-child) {
@@ -677,13 +698,65 @@ html {
   border-radius: 8px;
 }
 
+@media (min-width: 1050px) {
+  .Link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .Link__originalLink {
   border-bottom: 1px solid #9e9aa7;
   padding-bottom: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 20px 10px;
+}
+
+@media (min-width: 1050px) {
+  .Link__originalLink {
+    max-width: 500px;
+    height: 1.5rem;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin: 0 0 0 20px;
+  }
 }
 
 .Link__shortLink {
   color: #2acfcf;
+}
+
+@media (min-width: 1050px) {
+  .Link__shortLink {
+    margin-right: 20px;
+  }
+}
+
+.Link__shortLinkContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1050px) {
+  .Link__shortLinkContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .Link__copyButton {
@@ -693,6 +766,16 @@ html {
   letter-spacing: 0;
   font-size: 1.2rem;
   margin-bottom: 20px;
+}
+
+@media (min-width: 1050px) {
+  .Link__copyButton {
+    width: 115px;
+    margin: 10px 20px 10px 0;
+    min-width: 100px !important;
+    font-size: 18px;
+    min-height: 45px !important;
+  }
 }
 
 .Footer {
