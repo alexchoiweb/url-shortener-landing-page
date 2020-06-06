@@ -26,6 +26,7 @@ export default function URLInput() {
     }
 
     let url = inputRef.current.value;
+    inputRef.current.value = "";
     let inputEl = document.querySelector(".Content__input");
     let child = document.createElement("p");
     child.classList.add("Content__invalidInput");
@@ -65,12 +66,15 @@ export default function URLInput() {
   return (
     <>
       <div className="Content__inputContainer">
-        <input
-          className="Content__input"
-          ref={inputRef}
-          type="url"
-          placeholder="Shorten a link here..."
-        ></input>
+        <div className="Content__inputSubContainer">
+          <input
+            className="Content__input"
+            ref={inputRef}
+            type="url"
+            placeholder="Shorten a link here..."
+          ></input>
+        </div>
+
         <button className="Content__inputButton button-cta" onClick={submit}>
           Shorten it!
         </button>
