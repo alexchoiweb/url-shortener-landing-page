@@ -50,3 +50,5 @@ Content: 1.75hr
 Footer: 1hr
 
 Functionality: 3.5hr
+
+Cleanup: 

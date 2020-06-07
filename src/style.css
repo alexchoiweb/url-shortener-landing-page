@@ -116,7 +116,6 @@ html {
 }
 
 .Nav {
-  height: 60px;
   width: 100%;
 }
 
@@ -162,6 +161,12 @@ html {
   margin: 10px auto 0;
   border-radius: 5px;
   height: 390px;
+}
+
+@media (min-width: 600px) {
+  .Nav__buttons {
+    display: none;
+  }
 }
 
 .Nav__buttonsLeft {
