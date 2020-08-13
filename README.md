@@ -1,3 +1,3 @@
 ### Shortly Landing Page
 
-Built with create-react-app, scss, BEM methodology
+Built with React, SCSS, BEM methodology
